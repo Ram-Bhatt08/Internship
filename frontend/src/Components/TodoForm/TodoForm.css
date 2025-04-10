@@ -1,0 +1,96 @@
+/* TodoForm.css */
+.todo-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .todo-form input {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  .todo-form input:focus {
+    border-color: #4a6fa5;
+    box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.2);
+  }
+  
+  .todo-form input.error {
+    border-color: #ff6b6b;
+    animation: shake 0.5s ease;
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+  }
+  
+  .todo-form button {
+    padding: 12px 20px;
+    background-color: #4a6fa5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .todo-form button:hover {
+    background-color: #3a5a80;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .todo-form button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .error-message {
+    color: #ff6b6b;
+    font-size: 14px;
+    margin-top: 5px;
+    padding-left: 5px;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .input-group {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .todo-form button {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .todo-form input,
+    .todo-form button {
+      padding: 10px 12px;
+      font-size: 15px;
+    }
+  }
