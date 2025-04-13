@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // Database connection
-const MONGODB_URI = 'mongodb+srv://therambhatt:Fintech98%40@cluster0.shfj7yi.mongodb.net/todoapp?retryWrites=true&w=majority';
+const MONGODB_URI = 'mongodb://localhost:27017/todoapp';
 
 mongoose.connect(MONGODB_URI, {
   serverSelectionTimeoutMS: 5000, // Timeout after 5s instead of 30s
